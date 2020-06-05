@@ -1,0 +1,216 @@
+@import url(normalize.css);
+
+@font-face {
+    src: url(/fonts/Roboto-Regular.ttf);
+    font-family: 'Roboto-Regular';
+}
+
+body {
+    font-family: 'Roboto-Regular';
+}
+
+/*фон верхней части главной страницы*/
+/*фиксированный header
+.top-background {
+    background: url(/images/images_page1/photos/top.jpg) center center / cover no-repeat;
+    height: 560px;
+}*/
+
+/*блок фон верхней части главной страницы и наполнение фона*/
+.top-background {
+    background: url(/images/images_page1/photos/top.png) center center / cover no-repeat;
+    height: 560px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.top-background-text {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 5px;
+}
+
+.top-background-text h1 {
+    font-size: 60px;
+}
+
+.top-background-text p {
+    font-size: 25px;
+}
+
+.top-background-text-font-weight {
+    font-weight: 600;
+}
+
+.top-background-btn {
+    color: white;
+    text-transform: uppercase;
+    padding: 18px 39px;
+    background: rgb(112, 157, 202);
+    position: absolute;
+    bottom: 100px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+/*блок wrapper*/
+.wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*header*/
+/*фиксированный header
+.header {
+    color: white;
+    position: fixed;
+    max-width: 1500px;
+    min-width: 1000px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;    
+    padding: 21px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}*/
+
+/*блок header*/
+.header {
+    color: white;
+    position: absolute;
+    max-width: 1500px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;    
+    padding: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.header-logo-tower {
+    background: url(/images/images_page1/icons/spasskaya-tower.png) center center / contain no-repeat;
+    height: 63px;
+    width: 63px;
+    margin-right: 18px;
+}
+
+.header-logo-city {
+    background: url(/images/images_page1/icons/MyMoscow.png);
+    height: 35px;
+    width: 189px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 545px;
+    font-size: 14.5px;
+}
+
+/*блок about*/
+.about {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.about h2 {
+    color: rgb(112, 157, 202);
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+.about p {
+    color: rgb(57, 75, 81);
+    font-size: 24px;
+}
+
+.about-item {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+}
+
+.about-item-blocks {
+    flex-grow: 1;
+    flex-basis: 400px;
+    display: flex;
+    align-items: center;
+    margin: 16px;
+}
+
+.about-block-logo-map {
+    background: url(/images/images_page1/icons/map.png) center / contain no-repeat;
+    height: 150px;
+    max-width: 75px;
+    min-width: 75px;
+    margin-right: 10px;
+}
+
+.about-block-logo-souvenir {
+    background: url(/images/images_page1/icons/souvenir.png) center / contain no-repeat; 
+    height: 150px;
+    max-width: 75px;
+    min-width: 75px;
+    margin-right: 10px;
+}
+
+.about-block-logo-compass {
+    background: url(/images/images_page1/icons/compass.png) center / contain no-repeat; 
+    height: 150px;
+    max-width: 75px;
+    min-width: 75px;
+    margin-right: 10px;
+}
+
+.about-block-logo-picture {
+    background: url(/images/images_page1/icons/picture.png) center / contain no-repeat; 
+    height: 150px;
+    max-width: 75px;
+    min-width: 75px;
+    margin-right: 10px;
+}
+
+.about-block-logo-discussion {
+    background: url(/images/images_page1/icons/discussion.png) center / contain no-repeat; 
+    height: 150px;
+    max-width: 75px;
+    min-width: 75px;
+    margin-right: 10px;
+}
+
+.about-block-logo-sun {
+    background: url(/images/images_page1/icons/sun.png) center / contain no-repeat; 
+    height: 150px;
+    max-width: 75px;
+    min-width: 75px;
+    margin-right: 10px;
+}
+
+.about-block-text h3 {
+    color: rgb(57, 75, 81);
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.about-block-text p {
+    color: rgb(123, 123, 123);
+    font-size: 13px;
+    line-height: 15px;
+}
