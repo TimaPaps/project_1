@@ -19,7 +19,7 @@ body {
 /*блок фон верхней части главной страницы и наполнение фона*/
 .top-background {
     background: url(/images/images_page1/photos/top.png) center center / cover no-repeat;
-    height: 560px;
+    min-height: 560px;
     position: relative;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@ body {
 .top-background-text {
     color: rgb(255, 255, 255);
     text-align: center;
-    line-height: 5px;
+    margin-top: 100px;
 }
 
 .top-background-text h1 {
@@ -37,6 +37,7 @@ body {
 
 .top-background-text p {
     font-size: 25px;
+    margin: 5px 0;
 }
 
 .top-background-text-font-weight {
@@ -46,10 +47,9 @@ body {
 .top-background-btn {
     color: white;
     text-transform: uppercase;
+    margin-top: 60px;
     padding: 18px 39px;
     background: rgb(112, 157, 202);
-    position: absolute;
-    bottom: 100px;
     border-radius: 7px;
     font-size: 12px;
 }
@@ -122,6 +122,11 @@ body {
     justify-content: space-between;
     width: 545px;
     font-size: 14.5px;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
 }
 
 /*блок about*/
