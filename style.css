@@ -17,12 +17,13 @@ body {
 }*/
 
 /*блок фон верхней части главной страницы и наполнение фона*/
-.top-background {
-    background: url(/images/images_page1/photos/top.png) center center / cover no-repeat;
+.top-background {    
     min-height: 560px;
+    min-width: 100%;
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;   
 }
 
 .top-background-text {
@@ -52,6 +53,88 @@ body {
     background: rgb(112, 157, 202);
     border-radius: 7px;
     font-size: 12px;
+    cursor: pointer;
+}
+
+/*блок слайдер*/
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.top-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.top-slider-line {
+    display: flex;
+    left: 0;
+    position: relative;
+}
+
+.top-slider-line-item {
+    min-height: 560px;
+    min-width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-slider-line-item:nth-child(1),
+.top-slider-line-item:nth-last-child(1) {
+    background: url(/images/images_page1/slides/top.png) center center / cover no-repeat;
+}
+
+.top-slider-line-item:nth-child(2) {
+    background: url(/images/images_page1/slides/top_1.jpg) center center / cover no-repeat;
+}
+
+.top-slider-line-item:nth-child(3) {
+    background: url(/images/images_page1/slides/top_2.jpg) center center / cover no-repeat;
+}
+
+.top-slider-line-item:nth-child(4) {
+    background: url(/images/images_page1/slides/top_3.jpg) center center / cover no-repeat;
+}
+
+.top-slider-btn {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.top-slider-right-btn {
+    background: url(/images/images_page1/slides/round.png) center center / cover no-repeat;
+    right: 10vh;
+}
+.top-slider-right-btn:before {
+    content: "";
+    background: url(/images/images_page1/slides/arrow-right.png) center center / cover no-repeat;
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    top: 32%;
+    left: 38%;  
+}
+
+.top-slider-left-btn {
+    background: url(/images/images_page1/slides/round.png) center center / cover no-repeat;
+    left: 10vh;
+}
+.top-slider-left-btn:before {
+    content: "";
+    background: url(/images/images_page1/slides/arrow-left.png) center center / cover no-repeat;
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    top: 32%;
+    left: 38%;
 }
 
 /*блок wrapper*/
@@ -60,7 +143,8 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;  
+    z-index: 1;
 }
 
 /*header*/
@@ -160,52 +244,35 @@ body {
     margin: 16px;
 }
 
-.about-block-logo-map {
-    background: url(/images/images_page1/icons/map.png) center / contain no-repeat;
+.about-block-item {
     height: 150px;
     max-width: 75px;
     min-width: 75px;
     margin-right: 10px;
+}
+
+.about-block-logo-map {
+    background: url(/images/images_page1/icons/map.png) center / contain no-repeat;
 }
 
 .about-block-logo-souvenir {
     background: url(/images/images_page1/icons/souvenir.png) center / contain no-repeat; 
-    height: 150px;
-    max-width: 75px;
-    min-width: 75px;
-    margin-right: 10px;
 }
 
 .about-block-logo-compass {
     background: url(/images/images_page1/icons/compass.png) center / contain no-repeat; 
-    height: 150px;
-    max-width: 75px;
-    min-width: 75px;
-    margin-right: 10px;
 }
 
 .about-block-logo-picture {
     background: url(/images/images_page1/icons/picture.png) center / contain no-repeat; 
-    height: 150px;
-    max-width: 75px;
-    min-width: 75px;
-    margin-right: 10px;
 }
 
 .about-block-logo-discussion {
     background: url(/images/images_page1/icons/discussion.png) center / contain no-repeat; 
-    height: 150px;
-    max-width: 75px;
-    min-width: 75px;
-    margin-right: 10px;
 }
 
 .about-block-logo-sun {
     background: url(/images/images_page1/icons/sun.png) center / contain no-repeat; 
-    height: 150px;
-    max-width: 75px;
-    min-width: 75px;
-    margin-right: 10px;
 }
 
 .about-block-text h3 {
@@ -218,4 +285,192 @@ body {
     color: rgb(123, 123, 123);
     font-size: 13px;
     line-height: 15px;
+}
+
+/*блок info*/
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 193, 85);
+}
+
+.info-blocks {
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 430px;
+}
+
+.info-blocks-background {
+    background: url(/images/images_page1/photos/group.jpg) center center / cover no-repeat;
+    min-height: 100%;
+    width: 100%;
+}
+
+.info-blocks-text {
+    padding: 40px 40px 40px 80px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.info-blocks-text h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.info-blocks-text-btn {
+    background: rgb(243, 175, 55);
+    border: 1px solid rgb(255, 163, 0);
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/*блок photo*/
+.photo {
+    display: flex;
+}
+
+.photo-blocks {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    width: 25%;
+}
+
+.photo-blocks-item-block-1,
+.photo-blocks-item-block-2 {
+    min-height: 285px;
+    width: 100%;
+}
+
+.photo-blocks-item-block-1:nth-child(1) {
+    background: url(/images/images_page1/photos/1.jpg) center center/ cover no-repeat;
+}
+.photo-blocks-item-block-1:nth-child(2) {
+    background: url(/images/images_page1/photos/2.jpg) center center/ cover no-repeat;
+}
+.photo-blocks-item-block-1:nth-child(3) {
+    background: url(/images/images_page1/photos/3.jpg) center center/ cover no-repeat;
+}
+.photo-blocks-item-block-1:nth-child(4) {
+    background: url(/images/images_page1/photos/4.jpg) center center/ cover no-repeat;
+}
+
+.photo-blocks-item-block-2:nth-child(1) {
+    background: url(/images/images_page1/photos/5.jpg) center center/ cover no-repeat;
+}
+.photo-blocks-item-block-2:nth-child(2) {
+    background: url(/images/images_page1/photos/6.jpg) center center/ cover no-repeat;
+}
+.photo-blocks-item-block-2:nth-child(3) {
+    background: url(/images/images_page1/photos/7.jpg) center center/ cover no-repeat;
+}
+.photo-blocks-item-block-2:nth-child(4) {
+    background: url(/images/images_page1/photos/8.jpg) center center/ cover no-repeat;
+}
+
+/*блок bottom-slider*/
+.bottom-slider {
+    position: relative;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.bottom-slider-line {
+    display: flex;
+    left: 0;
+    position: relative;
+}
+
+.bottom-slider-line-item {
+    min-height: 350px;
+    min-width: 100%;    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bottom-slider-line-item-block {
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 430px;
+}
+
+.bottom-slider-line-item-block p {
+    margin: 0;
+}
+
+.bottom-slider-line-block-text {
+    height: 150px;
+    overflow: hidden;
+}
+
+.bottom-slider-line-item-block-user {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.bottom-slider-line-item-block-user-item {
+    height: 43px;
+    width: 43px;
+    margin-right: 10px;
+}
+
+.bottom-slider-line-item-block-1 {
+    padding: 60px 60px 60px 100px;
+    box-sizing: border-box;
+}
+
+.bottom-slider-line-item-block-user-1 {
+    background: url(/images/images_page1/testimonials/test1.jpg) left center / contain no-repeat;
+}
+
+.bottom-slider-line-item-block-2 {
+    padding: 60px 100px 60px 60px;
+    box-sizing: border-box;
+}
+
+.bottom-slider-line-item-block-user-2 {
+    background: url(/images/images_page1/testimonials/test2.jpg) left center / contain no-repeat;
+}
+
+.bottom-slider-btn {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bottom-slider-right-btn {
+    background: url(/images/images_page1/slides/round.png) center center / cover no-repeat;
+    right: 5vh;
+}
+.bottom-slider-right-btn:before {
+    content: "";
+    background: url(/images/images_page1/slides/arrow-right.png) center center / cover no-repeat;
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    top: 32%;
+    left: 38%;  
+}
+
+.bottom-slider-left-btn {
+    background: url(/images/images_page1/slides/round.png) center center / cover no-repeat;
+    left: 5vh;
+}
+.bottom-slider-left-btn:before {
+    content: "";
+    background: url(/images/images_page1/slides/arrow-left.png) center center / cover no-repeat;
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    top: 32%;
+    left: 38%;
 }
