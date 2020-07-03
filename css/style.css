@@ -1,4 +1,4 @@
-@import url(normalize.css);
+@import url(/css/normalize.css);
 
 @font-face {
     src: url(/fonts/Roboto-Regular.ttf);
@@ -49,7 +49,7 @@ body {
     color: white;
     text-transform: uppercase;
     margin-top: 60px;
-    padding: 18px 39px;
+    padding: 20px 40px;
     background: rgb(112, 157, 202);
     border-radius: 7px;
     font-size: 12px;
@@ -85,7 +85,7 @@ body {
 
 .top-slider-line-item:nth-child(1),
 .top-slider-line-item:nth-last-child(1) {
-    background: url(/images/images_page1/slides/top.png) center center / cover no-repeat;
+    background: url(/images/images_page1/slides/top.jpg) center center / cover no-repeat;
 }
 
 .top-slider-line-item:nth-child(2) {
@@ -174,7 +174,7 @@ body {
     right: 0;
     top: 0;
     margin: 0 auto;    
-    padding: 21px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -195,7 +195,7 @@ body {
 }
 
 .header-logo-city {
-    background: url(/images/images_page1/icons/MyMoscow.png);
+    background: url(/images/images_page1/icons/MyMoscow.png) center center / contain no-repeat; 
     height: 35px;
     width: 189px;
 }
@@ -211,6 +211,14 @@ body {
 .header-nav a {
     color: white;
     text-decoration: none;
+}
+
+.header-menu-btn {
+    background: url(/images/images_page1/icons/menu-btn.svg) center center / contain no-repeat;
+    height: 35px;
+    width: 35px;
+    display: none;
+    z-index: 1;
 }
 
 /*блок about*/
@@ -252,27 +260,27 @@ body {
 }
 
 .about-block-logo-map {
-    background: url(/images/images_page1/icons/map.png) center / contain no-repeat;
+    background: url(/images/images_page1/icons/map.png) center center/ contain no-repeat;
 }
 
 .about-block-logo-souvenir {
-    background: url(/images/images_page1/icons/souvenir.png) center / contain no-repeat; 
+    background: url(/images/images_page1/icons/souvenir.png) center center / contain no-repeat; 
 }
 
 .about-block-logo-compass {
-    background: url(/images/images_page1/icons/compass.png) center / contain no-repeat; 
+    background: url(/images/images_page1/icons/compass.png) center center / contain no-repeat; 
 }
 
 .about-block-logo-picture {
-    background: url(/images/images_page1/icons/picture.png) center / contain no-repeat; 
+    background: url(/images/images_page1/icons/picture.png) center center / contain no-repeat; 
 }
 
 .about-block-logo-discussion {
-    background: url(/images/images_page1/icons/discussion.png) center / contain no-repeat; 
+    background: url(/images/images_page1/icons/discussion.png) center center / contain no-repeat; 
 }
 
 .about-block-logo-sun {
-    background: url(/images/images_page1/icons/sun.png) center / contain no-repeat; 
+    background: url(/images/images_page1/icons/sun.png) center center / contain no-repeat; 
 }
 
 .about-block-text h3 {
@@ -376,7 +384,7 @@ body {
 /*блок bottom-slider*/
 .bottom-slider {
     position: relative;
-    min-width: 100%;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -391,6 +399,7 @@ body {
     min-width: 100%;    
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .bottom-slider-line-item-block {
@@ -421,21 +430,21 @@ body {
 }
 
 .bottom-slider-line-item-block-1 {
-    padding: 60px 60px 60px 100px;
+    padding: 60px;
     box-sizing: border-box;
 }
 
 .bottom-slider-line-item-block-user-1 {
-    background: url(/images/images_page1/testimonials/test1.jpg) left center / contain no-repeat;
+    background: url(/images/images_page1/testimonials/test1.jpg) center center / contain no-repeat;
 }
 
 .bottom-slider-line-item-block-2 {
-    padding: 60px 100px 60px 60px;
+    padding: 60px;
     box-sizing: border-box;
 }
 
 .bottom-slider-line-item-block-user-2 {
-    background: url(/images/images_page1/testimonials/test2.jpg) left center / contain no-repeat;
+    background: url(/images/images_page1/testimonials/test2.jpg) center center / contain no-repeat;
 }
 
 .bottom-slider-btn {
