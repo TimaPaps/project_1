@@ -1,6 +1,11 @@
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
+
+    .wrapper-block {
+        padding: 0 10px;
+    }
+
     .header {
-        padding: 5px;
+        padding: 10px;
     }
     .header-logo-tower {
         height: 35px;
@@ -89,14 +94,17 @@
     }
 
     .info-blocks-text {
-        padding: 5px 5px 5px 10px;
+        padding: 10px;
     }
 
     .info-blocks-text h3 {
         font-size: 12px;
     }
+    .info-blocks-text p {
+        font-size: 10px;
+    }
     .info-blocks-text-btn {
-        font-size: xx-small;
+        font-size: 9px;
 
         margin-top: 0;
         padding: 5px 15px;
@@ -157,10 +165,51 @@
         top: 32%;
         left: 40%;  
     }
+
+    .footer-blocks {
+        padding: 0;
+    }
+    .footer-blocks h2 {
+        font-size: 18px;
+    }
+    .footer-blocks p {
+        font-size: 10px;
+    }
+    .footer-blocks-item-logo-tower {
+        height: 35px;
+        width: 35px;
+    }
+    .footer-blocks-item-logo-city {
+        width: 100px;
+    }
+    .footer-blocks-item{
+        padding-bottom: 0;
+    } 
+    .footer-blocks-item-p {
+        padding-right: 0;
+    }
+
+    .footer-bottom {
+        padding: 0;
+    }
+    .footer-bottom-blocks p {
+        font-size: 8px;
+    }
+    .footer-bottom-blocks-item-social-logo {
+        height: 15px;
+        width: 15px;
+        margin: 5px;
+        margin: 3px;
+    }
 }
 
 @media (min-width: 701px) and (max-width:1000px) {
-
+    .header-menu-btn {
+        display: none;
+    }
+    .header-menu-close-btn {
+        display: none;
+    }
 }
 
 @media (min-width: 1001px) {

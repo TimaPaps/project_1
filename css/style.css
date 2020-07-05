@@ -145,6 +145,7 @@ body {
     align-items: center;
     flex-direction: column;  
     z-index: 1;
+    padding: 0 20px;
 }
 
 /*header*/
@@ -219,6 +220,22 @@ body {
     width: 35px;
     display: none;
     z-index: 1;
+}
+
+.header-menu-close-btn {
+    background: url(/images/images_page1/icons/close.svg) center center / contain no-repeat;
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    top: 20px;
+    right: 12px;
+    display: none;
+}
+
+.wrapper-block {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /*блок about*/
@@ -482,4 +499,110 @@ body {
     height: 16px;
     top: 32%;
     left: 38%;
+}
+
+/*блок footer*/
+.footer {
+    background: rgb(39, 58, 67);
+    min-height: 352px;
+}
+
+.footer-blocks {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 65px 0 30px 0;
+}
+
+.footer-blocks-item {
+    padding: 10px 0;
+    flex-grow: 1;
+    flex-basis: 350px;
+    box-sizing: border-box;
+}
+
+.footer-blocks-item h2 {
+    margin-top: 0;
+}
+
+.footer-blocks-item-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-blocks-item-p {
+    padding-right: 130px;
+}
+
+.footer-blocks-item-logo-tower {
+    background: url(/images/images_page1/icons/spasskaya-tower.png) center center / contain no-repeat;
+    height: 37px;
+    width: 37px;
+    margin-right: 10px;
+}
+
+.footer-blocks-item-logo-city {
+    background: url(/images/images_page1/icons/MyMoscow.png) center center / contain no-repeat; 
+    height: 21px;
+    width: 111px;
+}
+
+.footer-blocks-item-contacts {
+    display: flex;
+    align-items: center;
+}
+
+.footer-blocks-item-contacts-logo {
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+}
+
+.footer-blocks-item-contacts-logo-placeholder {
+    background: url(/images/images_page1/icons/placeholder.png) center center / contain no-repeat;
+}
+.footer-blocks-item-contacts-logo-mail {
+    background: url(/images/images_page1/icons/mail.png) center center / contain no-repeat;
+}
+.footer-blocks-item-contacts-logo-telephone {
+    background: url(/images/images_page1/icons/telephone.png) center center / contain no-repeat;
+}
+
+.footer-blocks-item-news-date {
+    color: rgb(113, 182, 213);
+}
+
+/*блок footer-bottom*/
+.footer-bottom {
+    background: rgb(23, 34, 39);
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.footer-bottom-blocks {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom-blocks-item-social {
+    display: flex;
+}
+
+.footer-bottom-blocks-item-social-logo {
+    height: 31px;
+    width: 31px;
+    margin: 5px;
+}
+
+.footer-bottom-blocks-item-social-logo:nth-child(1) {
+    background: url(/images/images_page1/social/vk.png) center center / contain no-repeat;
+}
+.footer-bottom-blocks-item-social-logo:nth-child(2) {
+    background: url(/images/images_page1/social/facebook.png) center center / contain no-repeat;
+}
+.footer-bottom-blocks-item-social-logo:nth-child(3) {
+    background: url(/images/images_page1/social/instagram.png) center center / contain no-repeat;
 }
