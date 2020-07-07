@@ -17,13 +17,26 @@ body {
 }*/
 
 /*блок фон верхней части главной страницы и наполнение фона*/
-.top-background {    
+.top-background {   
+    background: gray;
     min-height: 560px;
     min-width: 100%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;       
+}
+
+.top-background-trips {
+    background: url(../images/images_trips/top1.png) center center / cover no-repeat;
+}
+
+.top-background-contacts {
+    background: url(../images/images_contacts/top2.png) center center / cover no-repeat;
+}
+
+.about-text p {
+    text-align: left;
 }
 
 .top-background-text {
