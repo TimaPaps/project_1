@@ -32,29 +32,20 @@
         height: 20px;
         width: 20px;
     }
-    .top-background {
-        min-height: 200px;
-    }
+
     .top-background-text {
         margin-top: 60px;
     }
     .top-background-text h1 {
-        font-size: medium;
         margin-top: 0;
     }
-    .top-background-text p {
-        font-size: medium;
-    }
+   
     .top-background-btn {
-        font-size: xx-small;
         margin-top: 10px;
         padding: 5px 15px;
         border-radius: 3px;
     }
 
-    .top-slider-line-item {
-        min-height: 200px;
-    }
     .top-slider-btn {
         width: 25px;
         height: 25px;
@@ -82,30 +73,12 @@
     .about {
         margin: 5px;
     }
-    .about h2 {
-        font-size: 18px;
-    }
-    .about  p {
-        font-size: 10px;
-    }
-
-    p {
-        font-size: 12px;
-    }
 
     .info-blocks-text {
         padding: 10px;
     }
 
-    .info-blocks-text h3 {
-        font-size: 12px;
-    }
-    .info-blocks-text p {
-        font-size: 10px;
-    }
     .info-blocks-text-btn {
-        font-size: 9px;
-
         margin-top: 0;
         padding: 5px 15px;
         border-radius: 3px;
@@ -113,6 +86,7 @@
 
     .about-item-blocks {
         margin: 0 5px;
+        width: 100%;
     }
     .about-block-item {
         height: 100px;
@@ -120,12 +94,8 @@
         min-width: 40px;
         margin-right: 5px;
     }
-    .about-block-text h3 {
-        font-size: 12px;
-    }
 
-    .photo-blocks-item-block-1,
-    .photo-blocks-item-block-2 {
+    .photo-blocks-item {
         min-height: 75px;
     }
 
@@ -138,9 +108,6 @@
     }
     .bottom-slider-line-block-text {
         height: 90px;
-    }
-    .bottom-slider-line-block-text p {
-        font-size: 10px;
     }
     .bottom-slider-btn {
         width: 25px;
@@ -167,14 +134,9 @@
     }
 
     .footer-blocks {
-        padding: 0;
+        padding: 0 10px;
     }
-    .footer-blocks h2 {
-        font-size: 18px;
-    }
-    .footer-blocks p {
-        font-size: 10px;
-    }
+ 
     .footer-blocks-item-logo-tower {
         height: 35px;
         width: 35px;
@@ -192,9 +154,7 @@
     .footer-bottom {
         padding: 0;
     }
-    .footer-bottom-blocks p {
-        font-size: 8px;
-    }
+
     .footer-bottom-blocks-item-social-logo {
         height: 15px;
         width: 15px;
@@ -204,14 +164,9 @@
 }
 
 @media (min-width: 701px) and (max-width:1000px) {
-    .header-menu-btn {
-        display: none;
-    }
-    .header-menu-close-btn {
-        display: none;
-    }
+
 }
 
 @media (min-width: 1001px) {
-
+ 
 }

@@ -275,11 +275,13 @@ body {
 }
 
 .about-item-blocks {
-    flex-grow: 1;
-    flex-basis: 400px;
     display: flex;
     align-items: center;
-    margin: 16px;
+    width: 50%;
+    padding: 16px;
+    box-sizing: border-box;
+    /*flex-grow: 1;
+    flex-basis: 400px;*/
 }
 
 .about-block-item {
@@ -340,7 +342,7 @@ body {
 
 .info-blocks-background {
     background: url(/images/images_page1/photos/group.jpg) center center / cover no-repeat;
-    min-height: 100%;
+    min-height: 300px;
     width: 100%;
 }
 
@@ -350,7 +352,7 @@ body {
     color: white;
 }
 
-.info-blocks-text h3 {
+.info-blocks-text h2 {
     font-size: 26px;
     text-transform: uppercase;
 }
@@ -367,47 +369,40 @@ body {
     display: inline-block;
 }
 
-/*блок photo*/
-.photo {
-    display: flex;
-}
+/*блок photo-blocks*/
 
 .photo-blocks {
     display: flex;
-    align-items: center;
-    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.photo-blocks-item {
+    min-height: 285px;
     width: 25%;
 }
 
-.photo-blocks-item-block-1,
-.photo-blocks-item-block-2 {
-    min-height: 285px;
-    width: 100%;
-}
-
-.photo-blocks-item-block-1:nth-child(1) {
+.photo-blocks-item:nth-child(1) {
     background: url(/images/images_page1/photos/1.jpg) center center/ cover no-repeat;
 }
-.photo-blocks-item-block-1:nth-child(2) {
+.photo-blocks-item:nth-child(2) {
     background: url(/images/images_page1/photos/2.jpg) center center/ cover no-repeat;
 }
-.photo-blocks-item-block-1:nth-child(3) {
+.photo-blocks-item:nth-child(3) {
     background: url(/images/images_page1/photos/3.jpg) center center/ cover no-repeat;
 }
-.photo-blocks-item-block-1:nth-child(4) {
+.photo-blocks-item:nth-child(4) {
     background: url(/images/images_page1/photos/4.jpg) center center/ cover no-repeat;
 }
-
-.photo-blocks-item-block-2:nth-child(1) {
+.photo-blocks-item:nth-child(5) {
     background: url(/images/images_page1/photos/5.jpg) center center/ cover no-repeat;
 }
-.photo-blocks-item-block-2:nth-child(2) {
+.photo-blocks-item:nth-child(6) {
     background: url(/images/images_page1/photos/6.jpg) center center/ cover no-repeat;
 }
-.photo-blocks-item-block-2:nth-child(3) {
+.photo-blocks-item:nth-child(7) {
     background: url(/images/images_page1/photos/7.jpg) center center/ cover no-repeat;
 }
-.photo-blocks-item-block-2:nth-child(4) {
+.photo-blocks-item:nth-child(8) {
     background: url(/images/images_page1/photos/8.jpg) center center/ cover no-repeat;
 }
 
@@ -440,6 +435,7 @@ body {
 
 .bottom-slider-line-item-block p {
     margin: 0;
+    font-size: 18px;
 }
 
 .bottom-slider-line-block-text {
