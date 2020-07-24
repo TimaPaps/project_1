@@ -1,4 +1,34 @@
 <?php
+const DB_HOST = 'localhost';
+const DB_USER = 'root';
+const DB_PASS = '';
+const DB_NAME = 'web_project_1';
+
+$link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME); //соединяемся с БД и помещаем в переменную
+mysqli_set_charset($link, 'utf8'); //указываем кодировку для общения с БД
+//print_r($link);
+
+$result = mysqli_query($link, "SELECT `pic`, `header`, `text` FROM `offers`"); //функция php, к-я может сделать запрос к БД, к-ю помещаем в переменную 
+//print_r($result);
+//print_r($result->num_rows); //обращение к полям (свойствам объектаs)
+
+/*$row = mysqli_fetch_assoc($result); //найденные строчки превращаем в ассоциативный массив и помещаем в переменную
+print_r($row);
+$row = mysqli_fetch_assoc($result); //это и на 15 строке работает по одному разу
+print_r($row);*/
+
+/*//в цикле перебираем все строки из БД пока они есть (по окончании в while будет false и цикл остановится)
+while($row = mysqli_fetch_assoc($result)) {
+    print_r($row);
+}*/
+
+//запрос к reviews для блока - Отзывы
+$resultReviews = mysqli_query($link, "SELECT `text`, `pic`, `userName` From `reviews`"); 
+
+mysqli_close($link); //обязательно закрываем соединение (чистка памяти и т.д.)
+?>
+
+<?php
     include('inc/head-doctype.php');
 ?>
 <body>    
@@ -30,58 +60,25 @@
     <main>
         <section class="wrapper-block">
             <div class="about">
-                <h2>Что мы предлагаем?</h2>
+                <h2>ЧТО МЫ ПРЕДЛАГАЕМ?</h2>
                 <p>Наша главная цель - рассказать о Москве так, чтобы это было интересно всем!</p>
                 <div class="about-item">
-                    <div class="about-item-blocks">
-                        <div class="about-block-item about-block-logo-map"></div>
-                        <div class="about-block-text">
-                            <h3>Необычные маршруты</h3>
-                            <p>Мы обязательно порадуем тебя необычными маршрутами Москвы, которые прокладывают наши опытные гиды. Ты увидишь и узнаешь о Москве то, что никогда не знал!</p>
+                    <?php while($row = mysqli_fetch_assoc($result)): ?>
+                        <div class="about-item-blocks">
+                            <div class="about-block-item <?= $row['pic'] ?>"></div>
+                            <div class="about-block-text">
+                                <h3><?= $row['header'] ?></h3>
+                                <p><?= $row['text'] ?></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="about-item-blocks">
-                        <div class="about-block-item about-block-logo-souvenir"></div>
-                        <div class="about-block-text">
-                            <h3>Классные сувениры</h3>
-                            <p>Отличная новость! У нас появился магазин сувениров! И самое примечательное, сувениры мы делаем сами! Заходи к нам в гости!</p>
-                        </div>
-                    </div>
-                    <div class="about-item-blocks">
-                        <div class="about-block-item about-block-logo-compass"></div>
-                        <div class="about-block-text">
-                            <h3>Интересные экскурсии</h3>
-                            <p>За время экскурсий,которых у нас больше 20, ты узнаешь и увидишь все основные достопримечательности: Кремль, Храм Христа Спасителя, пройдешься по пешеходным улицам Москвы, узнаешь их историю и сделаешь самые классные фотографии.</p>
-                        </div>
-                    </div>
-                    <div class="about-item-blocks">
-                        <div class="about-block-item about-block-logo-picture"></div>
-                        <div class="about-block-text">
-                            <h3>Фотосессии в Москве</h3>
-                            <p>Команда MyMoscow рада провести креативные фотосессии в любом уголке Москвы. Не важно, свадьба у Вас или просто захотелось добавить в альбом или инстаграм красивые фотографии.</p>
-                        </div>
-                    </div>
-                    <div class="about-item-blocks">
-                        <div class="about-block-item about-block-logo-discussion"></div>
-                        <div class="about-block-text">
-                            <h3>Новые знакомства</h3>
-                            <p>MyMoscow - это целый клуб, где после московских прогулок ты сможешь продолжить общение с теми, кому интересна Москва, знакомиться с новыми людьми и делиться впечатлениями.</p>
-                        </div>
-                    </div>
-                    <div class="about-item-blocks">
-                        <div class="about-block-item about-block-logo-sun"></div>
-                        <div class="about-block-text">
-                            <h3>Яркие впечатления</h3>
-                            <p>Самое важное - это яркие эмоции, которые остануться с тобой на долгое время! Поэтому в нашей команде мы ждем именно тебя!</p>
-                        </div>
-                    </div>
+                    <?php endwhile; ?>
                 </div>
             </div>
         </section>
         <section class="info">
             <div class="info-blocks info-blocks-background"></div>
             <div class="info-blocks info-blocks-text">
-                <h2>Кто мы такие</h2>
+                <h2>КТО МЫ ТАКИЕ</h2>
                 <p>Мы - команда тех, кто любит историю и любит Москву.</p>
                 <p>Москва - это не только место по "заколачиванию денег" и "взращиванию карьеры", а еще и бесконечно красивые памятники природы, заказники, парки, заповедники. Активный отдых в Москве и Подмосковье - это отличная возможность вырваться из душного мегаполиса куда-нибудь в "дебри", навстречу приключениям. К счастью не все Подмосковье еще "облагорожено" асфальтными дорожками и высоченными коттеджными заборами. Еще встречаются места, настолько глухие и далекие, что, очутившись там, кажется, что ты - первый человек, ступивший на эту землю.</p>
                 <p>Там, где не проедет автомобилист и даже велосипедист, найдет лазейку и откроет для себя все красоты 100% бездорожья турист, проводящий свой активный отдых в Подмосковье.</p>
@@ -90,7 +87,7 @@
         </section>   
         <section class="wrapper-block">
             <div class="about">
-                <h2>Москва в фотографиях</h2>
+                <h2>МОСКВА В ФОТОГРАФИЯХ</h2>
                 <p>Проще всего рассказать обо всем в фотографиях. Смотрите наши фотоотчеты и присылайте нам свои фотографии.</p>
                 <div class="photo-blocks">
                     <div class="photo-blocks-item"></div>
@@ -106,29 +103,22 @@
         </section>   
         <section class="wrapper-block">
             <div id="reviews" class="about">
-                <h2>Отзывы</h2>
+                <h2>ОТЗЫВЫ</h2>
                 <div class="bottom-slider">
                     <div class="bottom-slider-line">
-                        <div class="bottom-slider-line-item">                           
-                            <div class="bottom-slider-line-item-block bottom-slider-line-item-block-1">
-                                <div class="bottom-slider-line-block-text">
-                                    <p>Были с дочкой и подругой на ночной экскурсии. Все таки много зависит от экскурсовода! Мы все четыре часа ходили за Станиславом Симоновым, как кролики. Боялись попустить хоть одно слово. При этом моей дочке - которая побывала во многих местах и с детства искушенная на интересные события - была сильно увлечена.</p>
-                                </div>                           
-                                <div class="bottom-slider-line-item-block-user">
-                                    <div class="bottom-slider-line-item-block-user-item bottom-slider-line-item-block-user-1"></div>
-                                    <p>Екатерина Васильева</p>
-                                </div>                             
+                        <?php while($row = mysqli_fetch_assoc($resultReviews)): ?>  
+                            <div class="bottom-slider-line-item">             
+                                <div class="bottom-slider-line-item-block bottom-slider-line-item-block-1">
+                                    <div class="bottom-slider-line-block-text">
+                                        <p><?= $row['text']?></p>
+                                    </div>                           
+                                    <div class="bottom-slider-line-item-block-user">
+                                        <div class="bottom-slider-line-item-block-user-item <?= $row['pic']?>"></div>
+                                        <p><?= $row['userName']?></p>
+                                    </div>                             
+                                </div>
                             </div>
-                            <div class="bottom-slider-line-item-block bottom-slider-line-item-block-2">
-                                <div class="bottom-slider-line-block-text">
-                                    <p>Ездили на экскурсию с семиклассниками и родителями. Всем очень понравилось! Экскурсовод Михаил Борисович очень интересно, необычно и с юмором рассказывал о Москве 16 века. Гибко подстраивал экскурсию под интерсы и потребности слушателей, ловко "управлял" подачей автобуса, не давая нам замерзнуть.) Огромное спасибо!</p>
-                                </div>                            
-                                <div class="bottom-slider-line-item-block-user">
-                                    <div class="bottom-slider-line-item-block-user-item bottom-slider-line-item-block-user-2"></div>
-                                    <p>Анна Крушевская</p>
-                                </div>  
-                            </div>
-                        </div>
+                        <?php endwhile; ?>
                     </div>
                     <div class="bottom-slider-btn bottom-slider-right-btn"></div>
                     <div class="bottom-slider-btn bottom-slider-left-btn"></div>

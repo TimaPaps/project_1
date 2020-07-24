@@ -27,14 +27,6 @@ body {
     justify-content: center;       
 }
 
-.top-background-trips {
-    background: url(../images/images_trips/top1.png) center center / cover no-repeat;
-}
-
-.top-background-contacts {
-    background: url(../images/images_contacts/top2.png) center center / cover no-repeat;
-}
-
 .about-text p {
     text-align: left;
 }
@@ -259,7 +251,7 @@ body {
 
 .about h2 {
     color: rgb(112, 157, 202);
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 36px;
 }
 
@@ -354,7 +346,7 @@ body {
 
 .info-blocks-text h2 {
     font-size: 26px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 .info-blocks-text-btn {
@@ -421,7 +413,7 @@ body {
 
 .bottom-slider-line-item {
     min-height: 350px;
-    min-width: 100%;    
+    min-width: 50%;    
     display: flex;
     flex-wrap: wrap;
 
@@ -441,6 +433,8 @@ body {
 .bottom-slider-line-block-text {
     height: 150px;
     overflow: hidden;
+    text-align: left;
+    font-style: italic;
 }
 
 .bottom-slider-line-item-block-user {
@@ -521,7 +515,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 65px 0 30px 0;
+    padding: 65px 20px 30px 20px;
 }
 
 .footer-blocks-item {
@@ -614,4 +608,37 @@ body {
 }
 .footer-bottom-blocks-item-social-logo:nth-child(3) {
     background: url(/images/images_page1/social/instagram.png) center center / contain no-repeat;
+}
+
+/*страница trips*/
+.top-background-trips {
+    background: url(../images/images_trips/top1.png) center center / cover no-repeat;
+}
+
+.trips-photo-item {
+    min-height: 300px;
+}
+
+.trips-photo-moscow-sity {
+    background: url(../images/images_trips/moscow-sity.jpg) center center / cover no-repeat;
+    min-height: 300px;
+}
+.trips-photo-stalinist-skyscrapers {
+    background: url(../images/images_trips/stalinist-skyscrapers.jpg) center center / cover no-repeat;
+    min-height: 300px;
+}
+.trips-photo-master-and-margarita {
+    background: url(../images/images_trips/master-and-margarita.jpg) center center / cover no-repeat;
+    min-height: 300px;
+}
+.trips-photo-metro {
+    background: url(../images/images_trips/metro.jpg) center center / cover no-repeat;
+    min-height: 300px;
+}
+/**/
+
+
+
+.top-background-contacts {
+    background: url(../images/images_contacts/top2.png) center center / cover no-repeat;
 }

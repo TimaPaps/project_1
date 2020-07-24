@@ -56,12 +56,12 @@ $('.bottom-slider-right-btn').click(function() {
         countBottom++;
         console.log(countBottom);
         $('.bottom-slider-line').animate({
-            'left': (-100 * countBottom) + '%'
+            'left': (-50 * countBottom) + '%'
         }, 500);
     } else {
         countBottom++;
         $('.bottom-slider-line').animate({
-            'left': (-100 * countBottom) + '%'
+            'left': (-50 * countBottom) + '%'
         }, 500, function() {
             $('.bottom-slider-line').css('left', 0);
         });
@@ -75,15 +75,15 @@ $('.bottom-slider-left-btn').click(function() {
         countBottom--;
         console.log(countBottom);
         $('.bottom-slider-line').animate({
-            'left': (-100 * countBottom) + '%'
+            'left': (-50 * countBottom) + '%'
         }, 500);
     } else {
         countBottom = slidesBottom.length;
         $('.bottom-slider-line').animate({
-            'left': (-100 * countBottom) + '%'
+            'left': (-50 * countBottom) + '%'
         }, 0, function() {
             $('.bottom-slider-line').animate({
-                'left': (-100 * (countBottom -= 1)) + '%'
+                'left': (-50 * (countBottom -= 1)) + '%'
             }, 500);
         });
     }
