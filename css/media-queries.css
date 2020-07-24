@@ -1,5 +1,6 @@
 @media only screen and (max-width: 700px) {
 
+    /*главная страница*/
     .wrapper-block {
         padding: 0 10px;
     }
@@ -74,16 +75,6 @@
         margin: 5px;
     }
 
-    .info-blocks-text {
-        padding: 10px;
-    }
-
-    .info-blocks-text-btn {
-        margin-top: 0;
-        padding: 5px 15px;
-        border-radius: 3px;
-    }
-
     .about-item-blocks {
         margin: 0 5px;
         width: 100%;
@@ -95,12 +86,24 @@
         margin-right: 5px;
     }
 
+    .info-blocks-text {
+        padding: 10px;
+    }
+
+    .info-blocks-text-btn {
+        margin-top: 0;
+        padding: 5px 15px;
+        border-radius: 3px;
+    }    
+
     .photo-blocks-item {
         min-height: 75px;
     }
 
-    .bottom-slider-line-item-block-1,
-    .bottom-slider-line-item-block-2 {
+    .bottom-slider-line-item {
+        min-height: 100px;
+    }
+    .bottom-slider-line-item-block-1 {
         padding: 10px 40px;
     }
     .bottom-slider-line-item-block-user {
@@ -161,6 +164,20 @@
         margin: 5px;
         margin: 3px;
     }
+    /*конец главной страницы*/
+
+    /*страница trips*/
+    /*конец страницы trips*/
+
+    /*страница contacts*/
+    .contacts-info-blocks {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .contacts-blocks {
+        width: 100%;
+    }
+    /*конец страницы contacts*/
 }
 
 @media (min-width: 701px) and (max-width:1000px) {

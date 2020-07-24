@@ -1,31 +1,48 @@
 <?php
-const DB_HOST = 'localhost';
-const DB_USER = 'root';
-const DB_PASS = '';
-const DB_NAME = 'web_project_1';
+//подключение к DB
+    const DB_HOST = 'localhost';
+    const DB_USER = 'root';
+    const DB_PASS = '';
+    const DB_NAME = 'web_project_1';
 
-$link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME); //соединяемся с БД и помещаем в переменную
-mysqli_set_charset($link, 'utf8'); //указываем кодировку для общения с БД
-//print_r($link);
+    $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME); //соединяемся с БД и помещаем в переменную
 
-$result = mysqli_query($link, "SELECT `pic`, `header`, `text` FROM `offers`"); //функция php, к-я может сделать запрос к БД, к-ю помещаем в переменную 
-//print_r($result);
-//print_r($result->num_rows); //обращение к полям (свойствам объектаs)
+//проверка на подключение к DB
+    if(!$link) {
+        echo 'Нет подключения к базе данных';
+        die(); //останавливаем работу скрипта
+    }
 
-/*$row = mysqli_fetch_assoc($result); //найденные строчки превращаем в ассоциативный массив и помещаем в переменную
-print_r($row);
-$row = mysqli_fetch_assoc($result); //это и на 15 строке работает по одному разу
-print_r($row);*/
+    /* правильная обработка на подключение к DB
+    try {
 
-/*//в цикле перебираем все строки из БД пока они есть (по окончании в while будет false и цикл остановится)
-while($row = mysqli_fetch_assoc($result)) {
+    } catch() {
+
+    }
+    */
+
+//указываем кодировку для общения с DB
+    mysqli_set_charset($link, 'utf8'); 
+    //print_r($link);
+
+    $result = mysqli_query($link, "SELECT `pic`, `header`, `text` FROM `offers`"); //функция php, к-я может сделать запрос к БД, к-ю помещаем в переменную 
+    //print_r($result);
+    //print_r($result->num_rows); //обращение к полям (свойствам объектаs)
+
+    /*$row = mysqli_fetch_assoc($result); //найденные строчки превращаем в ассоциативный массив и помещаем в переменную
     print_r($row);
-}*/
+    $row = mysqli_fetch_assoc($result); //это и на 15 строке работает по одному разу
+    print_r($row);*/
 
-//запрос к reviews для блока - Отзывы
-$resultReviews = mysqli_query($link, "SELECT `text`, `pic`, `userName` From `reviews`"); 
+    /*//в цикле перебираем все строки из БД пока они есть (по окончании в while будет false и цикл остановится)
+    while($row = mysqli_fetch_assoc($result)) {
+        print_r($row);
+    }*/
 
-mysqli_close($link); //обязательно закрываем соединение (чистка памяти и т.д.)
+    //запрос к reviews для блока - Отзывы
+    $resultReviews = mysqli_query($link, "SELECT `text`, `pic`, `userName` From `reviews`"); 
+
+    mysqli_close($link); //обязательно закрываем соединение (чистка памяти и т.д.)
 ?>
 
 <?php
@@ -84,23 +101,23 @@ mysqli_close($link); //обязательно закрываем соедине�
                 <p>Там, где не проедет автомобилист и даже велосипедист, найдет лазейку и откроет для себя все красоты 100% бездорожья турист, проводящий свой активный отдых в Подмосковье.</p>
                 <div class="info-blocks-text-btn">подробнее о нас</div>
             </div>
-        </section>   
-        <section class="wrapper-block">
-            <div class="about">
+        </section>  
+        <section>
+            <div class="wrapper-block about">
                 <h2>МОСКВА В ФОТОГРАФИЯХ</h2>
                 <p>Проще всего рассказать обо всем в фотографиях. Смотрите наши фотоотчеты и присылайте нам свои фотографии.</p>
-                <div class="photo-blocks">
-                    <div class="photo-blocks-item"></div>
-                    <div class="photo-blocks-item"></div>
-                    <div class="photo-blocks-item"></div>
-                    <div class="photo-blocks-item"></div>
-                    <div class="photo-blocks-item"></div>
-                    <div class="photo-blocks-item"></div>
-                    <div class="photo-blocks-item"></div>
-                    <div class="photo-blocks-item"></div>
-                </div>               
             </div>
-        </section>   
+            <div class="photo-blocks">
+                <div class="photo-blocks-item"></div>
+                <div class="photo-blocks-item"></div>
+                <div class="photo-blocks-item"></div>
+                <div class="photo-blocks-item"></div>
+                <div class="photo-blocks-item"></div>
+                <div class="photo-blocks-item"></div>
+                <div class="photo-blocks-item"></div>
+                <div class="photo-blocks-item"></div>
+            </div>  
+        </section> 
         <section class="wrapper-block">
             <div id="reviews" class="about">
                 <h2>ОТЗЫВЫ</h2>

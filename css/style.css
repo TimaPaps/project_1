@@ -326,6 +326,12 @@ body {
     background-color: rgb(255, 193, 85);
 }
 
+.info-revers {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    background-color: rgb(255, 193, 85);
+}
+
 .info-blocks {
     align-items: center;
     flex-grow: 1;
@@ -635,10 +641,109 @@ body {
     background: url(../images/images_trips/metro.jpg) center center / cover no-repeat;
     min-height: 300px;
 }
-/**/
+/*конец страницы trips*/
 
-
-
+/*страница contacts*/
 .top-background-contacts {
     background: url(../images/images_contacts/top2.png) center center / cover no-repeat;
 }
+
+.contacts-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacts-info-blocks {
+    background: rgb(255, 193, 85);
+    display: flex;
+    width: 48%;
+    /*flex-grow: 1;
+    flex-basis: 400px;*/
+}
+
+.contacts-info-blocks-photo-man {
+    background: url(../images/images_contacts/man.jpg) center center / cover no-repeat;
+    min-height: 200px;
+    width: 40%;
+}
+
+.contacts-info-blocks-photo-woman {
+    background: url(../images/images_contacts/woman.jpg) center center / cover no-repeat;
+    min-height: 200px;
+    width: 40%;
+}
+
+.contacts-info-blocks-text {
+    color: rgb(6, 32, 51);
+    padding: 30px;
+    box-sizing: border-box;
+    width: 60%;
+}
+
+.contacts-info-blocks-text h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.contacts-info-blocks-text p {
+    font-size: 18px;
+}
+
+.contacts-info-blocks-text a {
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 65px 0;
+}
+
+.contacts-blocks {
+    width: 48%;
+    color: rgb(6, 32, 51);
+    font-size: 22px;
+}
+
+.contacts-blocks-item {
+    display: flex;
+    align-items: center;
+}
+
+.contacts-blocks-item-logo {
+    min-height: 45px;
+    min-width: 45px;
+    margin-right: 30px;
+}
+
+/*форма отправки сообщения*/
+.form-item {
+    margin-bottom: 16px;
+}
+
+[type="text"],
+[type="email"],
+textarea {
+    border: 3px solid rgb(255, 193, 85);
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+
+[type="submit"] {
+    background: rgb(6, 32, 51);
+    padding: 12px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.map {
+    height: 570px;
+}
+/*конец страницы contacts*/
