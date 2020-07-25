@@ -31,7 +31,7 @@
 
     /*$row = mysqli_fetch_assoc($result); //найденные строчки превращаем в ассоциативный массив и помещаем в переменную
     print_r($row);
-    $row = mysqli_fetch_assoc($result); //это и на 15 строке работает по одному разу
+    $row = mysqli_fetch_assoc($result); //это и выше работает по одному разу
     print_r($row);*/
 
     /*//в цикле перебираем все строки из БД пока они есть (по окончании в while будет false и цикл остановится)
@@ -40,7 +40,7 @@
     }*/
 
     //запрос к reviews для блока - Отзывы
-    $resultReviews = mysqli_query($link, "SELECT `text`, `pic`, `userName` From `reviews`"); 
+    $resultReviews = mysqli_query($link, "SELECT `text`, `pic`, `userName` FROM `reviews`"); 
 
     mysqli_close($link); //обязательно закрываем соединение (чистка памяти и т.д.)
 ?>

@@ -7,11 +7,11 @@
             <?php
                 include('../inc/header.php');
             ?>
-            <section class="top-background-text">
+            <div class="top-background-text">
                 <h1>Необычная Москва</h1>
                 <p class="top-background-text-font-weight">MyMoscow</p>
                 <p>агенство интересных маршрутов</p>
-            </section> 
+            </div> 
         </div>                
     </div> 
     <main>

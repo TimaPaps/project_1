@@ -708,6 +708,10 @@ body {
     font-size: 22px;
 }
 
+.contacts-blocks h4 {
+    font-weight: inherit;
+}
+
 .contacts-blocks-item {
     display: flex;
     align-items: center;
