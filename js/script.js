@@ -1,6 +1,6 @@
 //выползающее меню header
 let countMenuBtn = 0;
-console.log(countMenuBtn);
+//console.log(countMenuBtn);
 
 $(window).resize(function() {    
 
@@ -50,4 +50,4 @@ $(window).resize(function() {
         $('.header-menu-close-btn').css('display', 'none');
     }
 });
-console.log(countMenuBtn);
+//console.log(countMenuBtn);

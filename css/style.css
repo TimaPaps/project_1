@@ -808,3 +808,55 @@ textarea {
 	background: #f4f6ff;
 }
 /*конец страницы поиска по клиентам*/
+
+/*начало - падающие снежинки*/
+.snowFlake {
+    /*background: white;
+    border-radius: 50%;*/
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 5;
+    animation: snow 11s infinite;
+    transform: translateY(0);
+    opacity: 1;
+    cursor: pointer;
+    z-index: 4;
+    background: url();
+}
+
+@keyframes snow {
+    70% {
+        opacity: 1;
+    } 
+    100% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+}
+
+.windowCountFlakeKill {
+    background: rgb(118, 223, 118);
+    border: 3px solid red;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 150px;
+    min-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 450px;
+    z-index: 4;
+    text-align: center;
+}
+
+.windowCountFlakeKill h4 {
+    margin: 0 0 10px 0;
+}
+
+.windowCountFlakeKill p {
+    margin: 0;
+}
+/*конец - падающие снежинки*/

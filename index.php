@@ -76,7 +76,7 @@
     </div>    
     <main>
         <section class="wrapper-block">
-            <div class="about">
+            <div id="about" class="about">
                 <h2>ЧТО МЫ ПРЕДЛАГАЕМ?</h2>
                 <p>Наша главная цель - рассказать о Москве так, чтобы это было интересно всем!</p>
                 <div class="about-item">
