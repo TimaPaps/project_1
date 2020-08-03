@@ -5,16 +5,16 @@ let countFlakeKill = 0;
 
 //создаю массив вирусов
 let virus = [
-    "url('/images/virus/virus.svg') center center / contain no-repeat",
-    "url('/images/virus/virus1.svg') center center / contain no-repeat",
-    "url('/images/virus/virus2.svg') center center / contain no-repeat",
-    "url('/images/virus/virus3.svg') center center / contain no-repeat",
-    "url('/images/virus/virus4.svg') center center / contain no-repeat",
-    "url('/images/virus/virus5.svg') center center / contain no-repeat",
-    "url('/images/virus/virus6.svg') center center / contain no-repeat",
-    "url('/images/virus/virus7.svg') center center / contain no-repeat",
-    "url('/images/virus/virus8.svg') center center / contain no-repeat",
-    "url('/images/virus/virus9.svg') center center / contain no-repeat"
+    "virus.svg",
+    "virus1.svg",
+    "virus2.svg",
+    "virus3.svg",
+    "virus4.svg",
+    "virus5.svg",
+    "virus6.svg",
+    "virus7.svg",
+    "virus8.svg",
+    "virus9.svg"
 ];
 
 // 1 создаю окно для подсчета удаленных снежинок
@@ -34,6 +34,11 @@ document.body.appendChild(windowCountFlakeKill);
 windowCountFlakeKill.prepend(flakeKillText); //заголовок
 windowCountFlakeKill.append(flakeKillCount); //счетчик
 
+//меняю рандомно размеры элемента
+function SizeRandom(min, max) {
+    return Math.round(Math.random() * (max - min + 1)) + min + 'px';
+}
+
 // 2 создаю функцию для генерации снежинок
 function createFlake() {
     // 2.1 создаю элемент
@@ -49,14 +54,12 @@ function createFlake() {
     // 2.2 изменяю элемент - правильный вариант - в файле стилей описать и подключить
     flake.classList.add('snowFlake');
     //вставляю рандомно из массива ссылки на картинки вирусов
-    flake.style.background = virus[Math.round(Math.random() * (virus.length - 1))];
+    let virusWay = `${virus[Math.round(Math.random() * (virus.length - 1))]}`;
+    flake.style.background = `url('/images/virus/${virusWay}') center center / contain no-repeat`;
     //вывожу элемент в разных местах экрана
     flake.style.left = Math.round(Math.random() * 90) + '%';
-    //меняю рандомно размеры элемента
-    function flakeSizeRandom(min, max) {
-        return Math.round(Math.random() * (max - min + 1)) + min + 'px';
-    }
-    let flakeWidth = flake.style.width = flakeSizeRandom(25, 60);
+
+    let flakeWidth = flake.style.width = SizeRandom(25, 60);
     flake.style.height = flakeWidth;
 
     // 2.3 обработчик события - при клике удаляю элемент

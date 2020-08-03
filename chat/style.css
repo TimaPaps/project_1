@@ -5,8 +5,9 @@
     font-family: 'Pattaya-Regular';
 }
 
-
+/*начало - мой вариант*/
 /*начало - блок pageChat*/
+/*
 .pageChat {
     display: flex;
     height: 100vh;
@@ -58,8 +59,10 @@
     display: inline-block;
     color: rgb(8, 9, 135);
 }
+*/
 
 /*форма*/
+/*
 [type=text],
 [type=submit] {
     border: 3px solid orange;
@@ -78,4 +81,94 @@
     font-family: 'Pattaya-Regular';
     color: red;
 }
+*/
 /*конец - блок pageChat*/
+/*конец - мой вариант*/
+
+/*вариант Алексея*/
+.box {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.to-rigth {
+    margin: 0 0 0 auto;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.is-bold {
+    font-weight: bold;
+}
+
+.chat {
+    display: flex;
+    min-height: 100vh;
+}
+.chat-user {
+    width: 30%;
+    background: lightgray;
+    border: 2px solid gray;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.chat-message {
+    width: 40%;
+    font-family: 'Pattaya-Regular';
+    color: red;
+    word-wrap: anywhere;
+}
+.chat-message-rigth {
+    text-align: right;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    background: darkblue;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.card-image {
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-position: center center;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    margin: 0 10px 10px 0;
+}
+.card-description-name {
+    background: orange;
+    color: darkblue;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.card-description-text {
+    color: white;
+}
+
+.user-form {
+    width: 100%;
+    margin: 10px 0;
+}
+
+textarea, 
+input {
+    width: 100%;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.message {
+    width: 300px;
+    background: rgb(77, 240, 240);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
