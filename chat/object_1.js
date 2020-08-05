@@ -396,4 +396,3 @@ for(let key in Tima.skills) { //цикл для перебора объекта
 Tima.sayHello('Иван Васильич', 'кепка');
 Tima.sayMyName();
 console.log(`${Tima.name}: возраст ${Tima.age}`);*/
-

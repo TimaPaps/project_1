@@ -99,8 +99,30 @@
     display: flex;
 }
 
+.flex-vertical-bottom {
+    align-items: flex-end;
+}
+
 .is-bold {
     font-weight: bold;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+.ghost {
+    opacity: 0.5;
+    min-width: fit-content;
+    font-size: 12px;
+    font-family: arial;
+}
+
+.margin-left {
+    margin-left: 10px;
+}
+.margin-rigth {
+    margin-right: 10px;
 }
 
 .chat {
@@ -118,7 +140,6 @@
     width: 40%;
     font-family: 'Pattaya-Regular';
     color: red;
-    word-wrap: anywhere;
 }
 .chat-message-rigth {
     text-align: right;
@@ -166,7 +187,8 @@ input {
 }
 
 .message {
-    width: 300px;
+    width: auto;
+    max-width: 400px;
     background: rgb(77, 240, 240);
     padding: 10px;
     box-sizing: border-box;

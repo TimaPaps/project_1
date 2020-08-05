@@ -9,12 +9,46 @@
 <body>
     <div class="chat">
         <div class="chat-user chat-user-tutor"></div>
-        <div class="chat-message">
-            <!--<div class="chat-message-left"></div>
-            <div class="chat-message-rigth"></div>-->
-        </div>
+        <div class="chat-message"></div>
         <div class="chat-user chat-user-student"></div>
     </div>
-    <script src="object_1.js"></script>
+
+    <template id="tmpl-form">
+            <textarea name="message"></textarea>
+            <input type="submit" value="отправить сообщение">
+            <input type="hidden" name="role" value="${role_id}">
+    </template>
+
+    <template id="tmpl-message">
+        <div class="box flex-box">
+            <div class="message dope_class">
+                <div>
+                    name
+                </div>
+                <div class="flex-box flex-vertical-bottom">
+                    <div class="word-break margin-rigth">
+                        textMessage
+                    </div>
+                    <div class="ghost to-rigth">
+                        format_time
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="tmpl-card"> 
+        <div class="card">
+            <div class="card-image" style="background: url(${pic}) center center /cover no-repeat;"></div>
+            <div class="card-description">
+                <div class="card-description-name">${name}</div>
+                <div class="card-description-text">Возраст: ${age}</div>
+                <div class="card-description-text">Email: ${email}</div>
+                <div class="card-description-text">Профессия: ${profession}</div>
+            </div>
+        </div>
+    </template>
+
+    <script src="object.js"></script>
 </body>
 </html>
