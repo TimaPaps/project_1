@@ -44,6 +44,10 @@ if (!empty($_GET)) {
 
     //print_r($result);
 }
+
+//обязательно закрываем соединение (чистка памяти и т.д.)
+    mysqli_close($link);
+    
     include($_SERVER['DOCUMENT_ROOT'] . '/inc/head-doctype.php');
 ?>
 <body>    

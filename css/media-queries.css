@@ -32,6 +32,17 @@
         display: block;
         height: 20px;
         width: 20px;
+        /*position: absolute;
+        /right: 10px;*/
+    }
+    .stick-1 { 
+        width: 20px;
+    }
+    .stick-2 { 
+        width: 20px;
+    }
+    .stick-3 { 
+        width: 20px;
     }
 
     .top-background-text {
@@ -108,9 +119,6 @@
     }
     .bottom-slider-line-item-block-user {
         margin-top: 10px;
-    }
-    .bottom-slider-line-block-text {
-        height: 90px;
     }
     .bottom-slider-btn {
         width: 25px;

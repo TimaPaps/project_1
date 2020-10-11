@@ -10,6 +10,9 @@
         <a href="../pages/contacts.php">Контакты</a>
         <a href="#">Отзывы</a>
     </div>   
-    <div class="header-menu-btn"></div>  
-    <div class="header-menu-close-btn"></div>      
+    <div class="header-menu-btn">
+        <div class="stick-1"></div>
+        <div class="stick-2"></div>
+        <div class="stick-3"></div>
+    </div>     
 </header>

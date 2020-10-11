@@ -153,6 +153,12 @@ body {
     padding: 0 20px;
 }
 
+.wrapper-block {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /*header*/
 /*фиксированный header
 .header {
@@ -220,33 +226,58 @@ body {
 }
 
 .header-menu-btn {
-    background: url(/images/images_page1/icons/menu-btn.svg) center center / contain no-repeat;
     height: 35px;
     width: 35px;
     display: none;
     z-index: 1;
+    position: relative;
+    cursor: pointer;
 }
-
-.header-menu-close-btn {
-    background: url(/images/images_page1/icons/close.svg) center center / contain no-repeat;
-    position: fixed;
-    height: 15px;
-    width: 15px;
-    top: 20px;
-    right: 12px;
+.stick-1 {
+    height: 4px;
+    width: 35px;
+    border: 1px solid white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: 800ms;
+}
+.stick-2 {
+    height: 4px;
+    width: 35px;
+    border: 1px solid white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40%;
+}
+.stick-3 {
+    height: 4px;
+    width: 35px;
+    border: 1px solid white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    transition: 800ms;
+}
+.menu-open .stick-1 {
+    transform: rotate(405deg);
+    top: 40%;
+}
+.menu-open .stick-2 {
     display: none;
+    transition: 1000ms;
 }
-
-.wrapper-block {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 20px;
+.menu-open .stick-3 {
+    transform: rotate(-405deg);
+    bottom: 40%;
 }
 
 /*блок about*/
 .about {
     text-align: center;
-    margin: 50px 0;
+    margin: 50px auto;
 }
 
 .about h2 {
@@ -336,6 +367,10 @@ body {
     align-items: center;
     flex-grow: 1;
     flex-basis: 430px;
+}
+
+.info-blocks > h3 {
+    font-size: 30px;
 }
 
 .info-blocks-background {
@@ -438,7 +473,7 @@ body {
 
 .bottom-slider-line-block-text {
     height: 150px;
-    overflow: hidden;
+    overflow: scroll;
     text-align: left;
     font-style: italic;
 }
