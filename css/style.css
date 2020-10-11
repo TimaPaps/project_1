@@ -9,13 +9,6 @@ body {
     font-family: 'Roboto-Regular';
 }
 
-/*фон верхней части главной страницы*/
-/*фиксированный header
-.top-background {
-    background: url(/images/images_page1/photos/top.jpg) center center / cover no-repeat;
-    height: 560px;
-}*/
-
 /*блок фон верхней части главной страницы и наполнение фона*/
 .top-background {   
     background: gray;
@@ -59,6 +52,7 @@ body {
     border-radius: 7px;
     font-size: 12px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 /*блок слайдер*/
@@ -158,24 +152,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/*header*/
-/*фиксированный header
-.header {
-    color: white;
-    position: fixed;
-    max-width: 1500px;
-    min-width: 1000px;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0 auto;    
-    padding: 21px 0;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}*/
 
 /*блок header*/
 .header {
@@ -282,7 +258,6 @@ body {
 
 .about h2 {
     color: rgb(112, 157, 202);
-    /*text-transform: uppercase;*/
     font-size: 36px;
 }
 
@@ -303,8 +278,6 @@ body {
     width: 50%;
     padding: 16px;
     box-sizing: border-box;
-    /*flex-grow: 1;
-    flex-basis: 400px;*/
 }
 
 .about-block-item {
@@ -387,23 +360,23 @@ body {
 
 .info-blocks-text h2 {
     font-size: 26px;
-    /*text-transform: uppercase;*/
 }
 
 .info-blocks-text-btn {
     background: rgb(243, 175, 55);
     border: 1px solid rgb(255, 163, 0);
+    color: white;
     font-size: 18px;
     text-transform: uppercase;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
     box-sizing: border-box;
     display: inline-block;
 }
 
 /*блок photo-blocks*/
-
 .photo-blocks {
     display: flex;
     flex-wrap: wrap;
@@ -457,7 +430,6 @@ body {
     min-width: 50%;    
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .bottom-slider-line-item-block {
@@ -473,9 +445,10 @@ body {
 
 .bottom-slider-line-block-text {
     height: 150px;
-    overflow: scroll;
     text-align: left;
     font-style: italic;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 
 .bottom-slider-line-item-block-user {
@@ -693,8 +666,6 @@ body {
     background: rgb(255, 193, 85);
     display: flex;
     width: 48%;
-    /*flex-grow: 1;
-    flex-basis: 400px;*/
 }
 
 .contacts-info-blocks-photo-man {
@@ -846,8 +817,6 @@ textarea {
 
 /*начало - падающие снежинки*/
 .snowFlake {
-    /*background: white;
-    border-radius: 50%;*/
     width: 60px;
     height: 60px;
     position: absolute;
